@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>我的个人博客</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="profile-header">
+      <img
+        src="./img/QQ图片20230625153312.png"
+        alt="用户头像"
+        class="avatar"
+      />
+      <h1>Tacoomi</h1>
+      <p>看你爹呢？sx 凸( •̀_•́ )凸</p>
+      <div class="stats">
+        <span>年龄：21</span>
+        <span>生日：11-4</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="posts">
+      <h2>关于我</h2>
+      <article>
+        <h3>基本信息</h3>
+        <p>姓名：王志雄    
+          性别：男    
+          年龄：21    
+          职业：学生    
+          所在单位：成都锦城学院</p>
+        <small></small>
+      </article>
+      <article>
+        <h3>兴趣爱好</h3>
+        <p>音乐    
+          游戏    
+          运动    
+        </p>
+        <small></small>
+      </article>
+      <article>
+        <h3>个人经历</h3>
+        <p>...</p>
+        <small></small>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div class="contact-info">
+      <h2>联系我</h2>
+      <p>可以通过以下方式联系我：</p>
+      <ul>
+        <li>
+          <a href="https://wx.mail.qq.com/">Email: 3523250544@qq.com</a>
+        </li>
+        <li>
+          <a href="https://im.qq.com/">QQ: 3523250544</a>
+        </li>
+        <li><a href="https://twitter.com/">@Tacoomi</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const header = document.querySelector('header');
+
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 0) {
+          header.style.position = 'fixed'; // 悬停在顶部
+          header.style.height = '60px'; // 缩小高度
+          header.style.backgroundColor = '#333'; // 改变背景颜色
+          header.style.backgroundSize = 'contain'; // 保持背景图像适应
+          header.style.backgroundPosition = 'center'; // 保持背景图像居中
+        } else {
+          header.style.position = 'relative'; // 恢复相对定位
+          header.style.height = '100vh'; // 恢复全屏高度
+          header.style.backgroundColor = 'transparent'; // 恢复透明背景
+          header.style.backgroundSize = 'contain'; // 保持背景图像适应
+          header.style.backgroundPosition = 'center'; // 保持背景图像居中
+        }
+      });
+    });
+  </script>
+</body>
+</html>
